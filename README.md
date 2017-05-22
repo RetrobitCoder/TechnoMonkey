@@ -20,6 +20,8 @@ Download the .hex file and upload with anytools using .hex, not tested
 # Info
 Using Arduboy2 library
 
+Banner image in .arduboy file was made by my girlfriend who goes by LENZ online
+
 # Story
 
 A meteor crashes in a zoo during the night.
