@@ -111,7 +111,7 @@ void mapScreen()
 
     invertRect = !invertRect;
 
-    if (ab.justPressed(A_BUTTON))
+    if (ab.justPressed(B_BUTTON))
     {
       gameState = PLAY;
       bossAttack1.isNull = true;
