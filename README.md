@@ -4,9 +4,9 @@ Arduboy game for Arduboyjam
 # Controls
 Left/Right move monkey, select boss on map screen
 
-A button shoots weapon during fight, selects boss on map screen
+A button shoots weapon during fight
 
-B button jumps during fight
+B button select boss on map screen, jumps during fight
 
 Down button pauses and unpaused game during fight
 
