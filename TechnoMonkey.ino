@@ -924,5 +924,5 @@ void loop()
       break;
   }
 
-  ab.display(true);
+  ab.display();
 }
