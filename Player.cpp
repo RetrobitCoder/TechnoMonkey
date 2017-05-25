@@ -78,7 +78,7 @@ bool Player::getFacing()
 void Player::updatePlayer(char buttonPressed, char comboButton)
 {
   if (this->isInvincible) this->invincibleFrame++;
-  if (this->invincibleFrame == INVINCIBLE_FRAMES && this->isInvincible) this->isInvincible = false;
+  if (this->invincibleFrame == invincibleFrames && this->isInvincible) this->isInvincible = false;
 
   rect.x = this->x;
   rect.y = this->y;
@@ -168,7 +168,7 @@ void Player::horizontalMove()
   {
     this->x += this->moveSpeed;
 
-    if (this->moveFrame == MOVE_FRAMES && !this->isInAir)
+    if (this->moveFrame == moveFrames && !this->isInAir)
     {
       if (this->reverseMove)
       {
@@ -199,7 +199,7 @@ void Player::horizontalMove()
   {
     this->x -= this->moveSpeed;
 
-    if (this->moveFrame == MOVE_FRAMES && !this->isInAir)
+    if (this->moveFrame == moveFrames && !this->isInAir)
     {
       if (this->reverseMove)
       {

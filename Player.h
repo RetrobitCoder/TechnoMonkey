@@ -1,7 +1,5 @@
 #ifndef player_h
 #define player_h
-#define MOVE_FRAMES 15
-#define INVINCIBLE_FRAMES 5
 #endif
 
 #include <Arduboy2.h>
@@ -36,6 +34,8 @@ class Player
 
   private:
 	static const byte maxAttackFrames = 15;
+	static const byte invincibleFrames = 5;
+	static const byte moveFrames = 15;
     Rect rect;
     byte x;
     byte y;
