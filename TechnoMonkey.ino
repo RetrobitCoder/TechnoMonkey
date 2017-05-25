@@ -22,8 +22,8 @@ struct attack
   bool isShield;
 } bossAttack1, bossAttack2, bossAttack3, playerAttack1, playerAttack2, playerAttack3;
 
-struct attack bossAttacks[3] = {NULL, NULL, NULL};
-struct attack playerAttacks[3] = {NULL, NULL, NULL};
+struct attack bossAttacks[3];
+struct attack playerAttacks[3];
 
 byte gameState = TITLE;
 byte lives = 3;
