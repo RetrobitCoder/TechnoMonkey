@@ -12,8 +12,7 @@ class Player
 {
   public:
     Player(byte xpos, byte ypos, byte pSize);
-    Player() {}
-    ~Player() {}
+    Player(){}
 
     //get player's x
     byte getX();

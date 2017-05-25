@@ -10,8 +10,7 @@ class Zookeeper
 {
   public:
     Zookeeper(byte xpos, byte ypos, byte len);
-    Zookeeper() {}
-    ~Zookeeper() {};
+    Zookeeper(){}
 
     //get Zookeeper's x pos
     byte getX();

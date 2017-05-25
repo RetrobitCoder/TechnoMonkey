@@ -10,8 +10,7 @@ class Elephant
 {
   public:
     Elephant(byte xpos, byte ypos, byte len);
-    Elephant() {}
-    ~Elephant() {};
+    Elephant(){}
 
     //get elephant's x pos
     byte getX();

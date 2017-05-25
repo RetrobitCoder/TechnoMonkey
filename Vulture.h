@@ -11,7 +11,6 @@ class Vulture
   public:
     Vulture(byte xpos, byte ypos, byte len);
     Vulture(){}
-    ~Vulture(){};
 
     //get vulture's x pos
     byte getX();

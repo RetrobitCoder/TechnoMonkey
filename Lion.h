@@ -11,7 +11,6 @@ class Lion
   public:
     Lion(byte xpos, byte ypos, byte len);
     Lion() {}
-    ~Lion() {};
 
     //get Lion's x pos
     byte getX();

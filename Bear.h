@@ -11,7 +11,6 @@ class Bear
   public:
     Bear(byte xpos, byte ypos, byte len);
     Bear(){}
-    ~Bear(){};
 
     //get bear's x pos
     byte getX();

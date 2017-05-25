@@ -10,8 +10,7 @@ class Hippo
 {
   public:
     Hippo(byte xpos, byte ypos, byte len);
-    Hippo() {}
-    ~Hippo() {};
+    Hippo(){}
 
     //get hippo's x pos
     byte getX();
