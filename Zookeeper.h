@@ -1,9 +1,8 @@
 #ifndef zookeeper_h
 #define zookeeper_h
-#ifndef Arduboy2_h
+#endif
+
 #include <Arduboy2.h>
-#endif
-#endif
 
 class Zookeeper
 {

@@ -1,9 +1,8 @@
 #ifndef elephant_h
 #define elephant_h
-#ifndef Arduboy2_h
+#endif
+
 #include <Arduboy2.h>
-#endif
-#endif
 
 class Elephant
 {

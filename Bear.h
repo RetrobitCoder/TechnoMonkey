@@ -1,9 +1,8 @@
 #ifndef bear_h
 #define bear_h
-#ifndef Arduboy2_h
+#endif
+
 #include <Arduboy2.h>
-#endif
-#endif
 
 class Bear
 {

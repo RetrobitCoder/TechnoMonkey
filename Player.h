@@ -2,10 +2,9 @@
 #define player_h
 #define MOVE_FRAMES 15
 #define INVINCIBLE_FRAMES 5
-#ifndef Arduboy2_h
+#endif
+
 #include <Arduboy2.h>
-#endif
-#endif
 
 class Player
 {

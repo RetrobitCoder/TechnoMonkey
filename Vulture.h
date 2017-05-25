@@ -1,9 +1,8 @@
 #ifndef vulture_h
 #define vulture_h
-#ifndef Arduboy2_h
+#endif
+
 #include <Arduboy2.h>
-#endif
-#endif
 
 class Vulture
 {

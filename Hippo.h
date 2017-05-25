@@ -1,9 +1,8 @@
 #ifndef hippo_h
 #define hippo_h
-#ifndef Arduboy2_h
+#endif
+
 #include <Arduboy2.h>
-#endif
-#endif
 
 class Hippo
 {
