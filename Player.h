@@ -1,6 +1,5 @@
 #ifndef player_h
 #define player_h
-#endif
 
 #include <Arduboy2.h>
 
@@ -67,3 +66,4 @@ class Player
     void attack();
 };
 
+#endif

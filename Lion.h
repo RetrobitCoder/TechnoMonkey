@@ -1,6 +1,5 @@
 #ifndef lion_h
 #define lion_h
-#endif
 
 #include <Arduboy2.h>
 
@@ -42,3 +41,4 @@ class Lion
     void attack();
 };
 
+#endif

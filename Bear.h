@@ -1,6 +1,5 @@
 #ifndef bear_h
 #define bear_h
-#endif
 
 #include <Arduboy2.h>
 
@@ -44,3 +43,4 @@ class Bear
     void attack();
 };
 
+#endif

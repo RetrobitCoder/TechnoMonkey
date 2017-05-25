@@ -1,6 +1,5 @@
 #ifndef elephant_h
 #define elephant_h
-#endif
 
 #include <Arduboy2.h>
 
@@ -42,3 +41,4 @@ class Elephant
     void attack();
 };
 
+#endif

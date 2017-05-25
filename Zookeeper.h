@@ -1,6 +1,5 @@
 #ifndef zookeeper_h
 #define zookeeper_h
-#endif
 
 #include <Arduboy2.h>
 
@@ -42,3 +41,4 @@ class Zookeeper
     void attack();
 };
 
+#endif

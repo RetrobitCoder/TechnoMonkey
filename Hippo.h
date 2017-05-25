@@ -1,6 +1,5 @@
 #ifndef hippo_h
 #define hippo_h
-#endif
 
 #include <Arduboy2.h>
 
@@ -42,3 +41,5 @@ class Hippo
     //attack
     void attack();
 };
+
+#endif

@@ -1,6 +1,5 @@
 #ifndef vulture_h
 #define vulture_h
-#endif
 
 #include <Arduboy2.h>
 
@@ -48,3 +47,5 @@ class Vulture
     //attack
     void attack();
 };
+
+#endif
