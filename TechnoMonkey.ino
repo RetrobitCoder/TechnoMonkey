@@ -64,7 +64,7 @@ void titleScreen()
   ab.drawBitmap(0, 0, TechnoMonkeyTitle, WIDTH, HEIGHT, WHITE);
   if (ab.pressed(A_BUTTON))
   {
-    gameState = GameGameGameState::Map;
+    gameState = GameState::Map;
     ab.delayShort(200);
   }
 
