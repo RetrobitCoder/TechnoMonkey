@@ -1,6 +1,5 @@
 #ifndef lion_h
 #define lion_h
-#define ATTACK_FRAMES 5
 #ifndef Arduboy2_h
 #include <Arduboy2.h>
 #endif
@@ -11,7 +10,6 @@ class Lion
   public:
     Lion(byte xpos, byte ypos, byte len);
     Lion() {}
-    ~Lion() {};
 
     //get Lion's x pos
     byte getX();
@@ -28,12 +26,13 @@ class Lion
     void updateLion();
 
   private:
+	static const byte maxAttackFrames = 5;
     byte x;
     byte y;
     byte w;
     int health = 50;
     byte frame;
-    byte attackFrames = ATTACK_FRAMES;
+    byte attackFrames = maxAttackFrames;
     byte moveSpeed = 6;
     bool isAttacking = false;
     bool facingRight = false;

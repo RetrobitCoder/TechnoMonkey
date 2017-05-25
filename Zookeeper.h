@@ -1,6 +1,5 @@
 #ifndef zookeeper_h
 #define zookeeper_h
-#define ATTACK_FRAMES 20
 #ifndef Arduboy2_h
 #include <Arduboy2.h>
 #endif
@@ -10,8 +9,7 @@ class Zookeeper
 {
   public:
     Zookeeper(byte xpos, byte ypos, byte len);
-    Zookeeper() {}
-    ~Zookeeper() {};
+    Zookeeper(){}
 
     //get Zookeeper's x pos
     byte getX();
@@ -28,12 +26,13 @@ class Zookeeper
     void updateZookeeper();
 
   private:
+	static const byte maxAttackFrames = 20;
     byte x;
     byte y;
     byte w;
     int health = 60;
     byte frame;
-    byte attackFrames = ATTACK_FRAMES;
+    byte attackFrames = maxAttackFrames;
     byte moveSpeed = 5;
     bool isAttacking = false;
     bool facingRight = false;

@@ -61,12 +61,12 @@ void Vulture::updateVulture()
   {
     if(this->facingRight)
     {
-      if(this->frame == 3 && attackFrames < ATTACK_FRAMES/2) this->frame = 4;
+      if(this->frame == 3 && attackFrames < maxAttackFrames/2) this->frame = 4;
       else this->frame = 3;
     }
     else
     {
-      if(this->frame == 8 && attackFrames < ATTACK_FRAMES/2) this->frame = 9;
+      if(this->frame == 8 && attackFrames < maxAttackFrames/2) this->frame = 9;
       else this->frame = 8;
     }
 
@@ -157,6 +157,6 @@ void Vulture::attack()
   if (this->attackFrames == 0)
   {
     this->isAttacking = false;
-    this->attackFrames = ATTACK_FRAMES;
+    this->attackFrames = maxAttackFrames;
   }
 }

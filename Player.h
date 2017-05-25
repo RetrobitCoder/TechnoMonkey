@@ -1,7 +1,6 @@
 #ifndef player_h
 #define player_h
 #define MOVE_FRAMES 15
-#define ATTACK_FRAMES 15
 #define INVINCIBLE_FRAMES 5
 #ifndef Arduboy2_h
 #include <Arduboy2.h>
@@ -12,8 +11,7 @@ class Player
 {
   public:
     Player(byte xpos, byte ypos, byte pSize);
-    Player() {}
-    ~Player() {}
+    Player(){}
 
     //get player's x
     byte getX();
@@ -38,6 +36,7 @@ class Player
     void updatePlayer(char buttonPressed, char comboButton);
 
   private:
+	static const byte maxAttackFrames = 15;
     Rect rect;
     byte x;
     byte y;
