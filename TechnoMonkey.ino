@@ -3,13 +3,12 @@
 #include "Bitmaps.h"
 #include "Bosses.h"
 
+enum class GameState : unsigned char
+{
+	Title, Map, Play, Pause, Win, GameOver
+};
+
 #define SELECT_SIZE 4
-#define TITLE 0
-#define MAP 1
-#define PLAY 2
-#define PAUSE 3
-#define WIN 4
-#define GAME_OVER 9
 
 struct attack
 {
@@ -25,7 +24,7 @@ struct attack
 struct attack bossAttacks[3];
 struct attack playerAttacks[3];
 
-byte gameState = TITLE;
+GameState gameState = GameState::Title;
 byte lives = 3;
 bool bossesClear = false;
 bool invertRect = false;
@@ -65,7 +64,7 @@ void titleScreen()
   ab.drawBitmap(0, 0, TechnoMonkeyTitle, WIDTH, HEIGHT, WHITE);
   if (ab.pressed(A_BUTTON))
   {
-    gameState = MAP;
+    gameState = GameGameGameState::Map;
     ab.delayShort(200);
   }
 
@@ -82,7 +81,7 @@ void titleScreen()
 //draw boss select screen
 void mapScreen()
 {
-  if (lives == 0) gameState = GAME_OVER;
+  if (lives == 0) gameState = GameState::GameOver;
   else
   {
     ab.drawBitmap(0, 0, Map, WIDTH, HEIGHT);
@@ -113,7 +112,7 @@ void mapScreen()
 
     if (ab.justPressed(B_BUTTON))
     {
-      gameState = PLAY;
+      gameState = GameState::Play;
       bossAttack1.isNull = true;
       bossAttack2.isNull = true;
       bossAttack3.isNull = true;
@@ -141,7 +140,7 @@ void pauseScreen()
   ab.drawRect(WIDTH/2 - 20, HEIGHT/2 - 5, 40, 12);
   ab.setCursor(WIDTH/2 - 18, HEIGHT/2 - 3);
   ab.print("Paused");
-  if(ab.justPressed(DOWN_BUTTON)) gameState = PLAY;
+  if(ab.justPressed(DOWN_BUTTON)) gameState = GameState::Play;
 }
 
 void gameOver()
@@ -153,7 +152,7 @@ void gameOver()
 
   if (ab.justPressed(A_BUTTON))
   {
-    gameState = TITLE;
+    gameState = GameState::Title;
     lives = 3;
     ab.delayShort(200);
   }
@@ -323,7 +322,7 @@ void bearFight()
 
     if (bossBear.isDead())
     {
-      gameState = MAP;
+      gameState = GameState::Map;
       bearBeat = true;
       isFighting = false;
     }
@@ -405,7 +404,7 @@ void vultureFight()
 
     if (bossVulture.isDead())
     {
-      gameState = MAP;
+      gameState = GameState::Map;
       vultureBeat = true;
       isFighting = false;
     }
@@ -489,7 +488,7 @@ void hippoFight()
 
     if (bossHippo.isDead())
     {
-      gameState = MAP;
+      gameState = GameState::Map;
       hippoBeat = true;
       isFighting = false;
     }
@@ -570,7 +569,7 @@ void lionFight()
 
     if (bossLion.isDead())
     {
-      gameState = MAP;
+      gameState = GameState::Map;
       lionBeat = true;
       isFighting = false;
     }
@@ -651,7 +650,7 @@ void elephantFight()
 
     if (bossElephant.isDead())
     {
-      gameState = MAP;
+      gameState = GameState::Map;
       elephantBeat = true;
       isFighting = false;
     }
@@ -732,7 +731,7 @@ void finalFight()
 
     if (finalBoss.isDead())
     {
-      gameState = WIN;
+      gameState = GameState::Win;
       isFighting = false;
     }
   }
@@ -849,7 +848,7 @@ void gameLoop()
   ab.drawFastHLine(0, HEIGHT - 1, WIDTH);
   if (ab.justPressed(DOWN_BUTTON))
   {
-    gameState = PAUSE;
+    gameState = GameState::Pause;
   }
   else
   {
@@ -857,12 +856,12 @@ void gameLoop()
 
     if (lives == 0)
     {
-      gameState = GAME_OVER;
+      gameState = GameState::GameOver;
       isFighting = false;
     }
     else if (player.isDead())
     {
-      gameState = MAP;
+      gameState = GameState::Map;
       isFighting = false;
       //player.setHealth(50);
       lives--;
@@ -904,22 +903,22 @@ void loop()
 
   switch (gameState)
   {
-    case TITLE:
+    case GameState::Title:
       titleScreen();
       break;
-    case MAP:
+    case GameState::Map:
       mapScreen();
       break;
-    case PLAY:
+    case GameState::Play:
       gameLoop();
       break;
-    case PAUSE:
+    case GameState::Pause:
       pauseScreen();
       break;
-    case GAME_OVER:
+    case GameState::GameOver:
       gameOver();
       break;
-    case WIN:
+    case GameState::Win:
       winScreen();
       break;
   }
