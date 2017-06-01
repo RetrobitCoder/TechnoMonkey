@@ -1,17 +1,13 @@
 #ifndef vulture_h
 #define vulture_h
-#define ATTACK_FRAMES 10
-#ifndef Arduboy2_h
+
 #include <Arduboy2.h>
-#endif
-#endif
 
 class Vulture
 {
   public:
     Vulture(byte xpos, byte ypos, byte len);
     Vulture(){}
-    ~Vulture(){};
 
     //get vulture's x pos
     byte getX();
@@ -28,13 +24,14 @@ class Vulture
     void updateVulture();
 
   private:
+	static const byte maxAttackFrames = 10;
     byte x;
     byte y;
     byte w;
     int health = 50;
     byte frame;
     int frameStep;
-    byte attackFrames = ATTACK_FRAMES;
+    byte attackFrames = maxAttackFrames;
     byte moveSpeed = 3;
     bool isAttacking = false;
     bool facingRight = false;
@@ -50,3 +47,5 @@ class Vulture
     //attack
     void attack();
 };
+
+#endif

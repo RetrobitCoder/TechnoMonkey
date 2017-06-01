@@ -117,6 +117,6 @@ void Hippo::attack()
   if (this->attackFrames == 0)
   {
     this->isAttacking = false;
-    this->attackFrames = ATTACK_FRAMES;
+    this->attackFrames = maxAttackFrames;
   }
 }

@@ -1,17 +1,13 @@
 #ifndef bear_h
 #define bear_h
-#define ATTACK_FRAMES 15
-#ifndef Arduboy2_h
+
 #include <Arduboy2.h>
-#endif
-#endif
 
 class Bear
 {
   public:
     Bear(byte xpos, byte ypos, byte len);
     Bear(){}
-    ~Bear(){};
 
     //get bear's x pos
     byte getX();
@@ -29,12 +25,13 @@ class Bear
     void updateBear();
 
   private:
+	static const byte maxAttackFrames = 15;
     byte x;
     byte y;
     byte w;
     int health = 50;
     byte frame;
-    byte attackFrames = ATTACK_FRAMES;
+    byte attackFrames = maxAttackFrames;
     byte moveSpeed = 3;
     bool isAttacking = false;
     bool facingRight = false;
@@ -46,3 +43,4 @@ class Bear
     void attack();
 };
 
+#endif

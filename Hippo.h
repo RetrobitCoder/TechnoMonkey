@@ -1,17 +1,13 @@
 #ifndef hippo_h
 #define hippo_h
-#define ATTACK_FRAMES 20
-#ifndef Arduboy2_h
+
 #include <Arduboy2.h>
-#endif
-#endif
 
 class Hippo
 {
   public:
     Hippo(byte xpos, byte ypos, byte len);
-    Hippo() {}
-    ~Hippo() {};
+    Hippo(){}
 
     //get hippo's x pos
     byte getX();
@@ -28,12 +24,13 @@ class Hippo
     void updateHippo();
 
   private:
+	static const byte maxAttackFrames = 20;
     byte x;
     byte y;
     byte w;
     int health = 50;
     byte frame;
-    byte attackFrames = ATTACK_FRAMES;
+    byte attackFrames = maxAttackFrames;
     byte moveSpeed = 1;
     bool isAttacking = false;
     bool facingRight = false;
@@ -44,3 +41,5 @@ class Hippo
     //attack
     void attack();
 };
+
+#endif
