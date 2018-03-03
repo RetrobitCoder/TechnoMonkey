@@ -22,6 +22,9 @@ Using Arduboy2 library
 
 Banner image in .arduboy file was made by my girlfriend who goes by LENZ online
 
+# Game License
+MIT : https://opensource.org/licenses/MIT
+
 # Story
 
 A meteor crashes in a zoo during the night.
