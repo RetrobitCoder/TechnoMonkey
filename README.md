@@ -23,7 +23,7 @@ Using Arduboy2 library
 Banner image in .arduboy file was made by my girlfriend who goes by LENZ online
 
 # Game License
-MIT : https://opensource.org/licenses/MIT
+MIT : <https://opensource.org/licenses/MIT>
 
 # Story
 
