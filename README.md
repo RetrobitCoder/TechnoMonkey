@@ -1,31 +1,20 @@
 # TechnoMonkey
-Arduboy game for Arduboyjam
+![banner image](images/banner.jpg)
 
-# Controls
-Left/Right move monkey, select boss on map screen
+Title Screen: LENZ
 
-A button shoots weapon during fight
+LENZ's work can be found at:
 
-B button select boss on map screen, jumps during fight
+[LENZ's Instagram](https://www.instagram.com/lenzartz/)
 
-Down button pauses and unpaused game during fight
+Developer: Zachariah Falgout (RetrobitCoder)
 
-# Download Instructions
-Download all files as zip and upload through the Arduino IDE
+Game Art: Zachariah Falgout (RetrobitCoder)
 
-Download the .arduboy file and upload using loader, not tested
+Arduboy Library: Arduboy2
 
-Download the .hex file and upload with anytools using .hex, not tested
-
-# Info
-Using Arduboy2 library
-
-Banner image in .arduboy file was made by my girlfriend who goes by LENZ online
-
-# Game License
-MIT : <https://opensource.org/licenses/MIT>
-
-# Story
+## Story
+---
 
 A meteor crashes in a zoo during the night.
 
@@ -37,3 +26,35 @@ Do to the outbreak, the zoo has been under quarantine.
 It is a fight for survival inside.
 
 Can you beat the opposing Technoids and survive?
+
+## How to Play
+---
+
+You control the Techno Monkey, and you must stop the 6 other Technoids that are running rampant in the zoo with your newly acquired buster.
+
+## Controls
+---
+
+Left/Right move monkey, select boss on map screen
+
+A button shoots weapon during fight
+
+B button select boss on map screen, jumps during fight
+
+Down button pauses and unpaused game during fight
+
+## How to Download
+---
+### .arduboy
+Using an Arduboy game uploader, upload the .arduboy file to your Arduboy.
+
+### .hex
+Using an Arduboy game uploader that supports .hex files, or any other tools that can upload .hex files to the Arduboy, upload the .hex file to your Arduboy.
+
+### source
+Rename file from TechnoMonkey-master to TechnoMonkey then upload to Arduboy using the Arduino IDE.
+
+
+## Game License
+---
+[MIT](https://opensource.org/licenses/MIT)
