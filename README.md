@@ -1,7 +1,7 @@
 # TechnoMonkey
 ![banner image](images/banner.jpg)
 
-Title Screen: LENZ
+Banner Image: LENZ
 
 LENZ's work can be found at:
 
