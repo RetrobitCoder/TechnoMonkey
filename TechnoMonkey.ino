@@ -56,6 +56,9 @@ void setup()
 {
   ab.begin();
   ab.clear();
+  sprites.drawSelfMasked(0,0, ArduboyTitle_RetrobitCoder, 0);
+  ab.display();
+  ab.delayShort(3000);
 }
 
 //draw title screen
