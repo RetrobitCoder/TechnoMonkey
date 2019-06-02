@@ -13,6 +13,11 @@ Game Art: Zachariah Falgout (RetrobitCoder)
 
 Arduboy Library: Arduboy2
 
+This game can also be played by downloading [Felipe Manga's Arduboy Emulator](https://github.com/felipemanga/ProjectABE/releases) and dragging and dropping in the hex file.
+
+![screenshot0](images/screenshot0.png)
+![screenshot1](images/screenshot1.png)
+
 ## Story
 ---
 
